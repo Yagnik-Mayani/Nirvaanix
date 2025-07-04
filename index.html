@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nirvaanix - Digital Marketing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Nirvaanix</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="content">
+      <h1>Grow Your Business With Us</h1>
+      <p>Digital marketing that delivers real results. Let us help you dominate your niche.</p>
+      <a href="#services" class="btn">Explore Services</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <h2>About Us</h2>
+    <p>At Nirvaanix, we specialize in creating unique digital marketing strategies tailored to your business. With
+      expert teams in SEO, paid ads, content, and analytics, we guarantee impactful results and measurable growth.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">Search Engine Optimization (SEO)</div>
+      <div class="card">Pay-Per-Click Advertising (Google Ads)</div>
+      <div class="card">Social Media Campaigns</div>
+      <div class="card">Email Automation</div>
+      <div class="card">Conversion Optimization</div>
+      <div class="card">Web Analytics</div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="section portfolio" id="portfolio">
+    <h2>Our Work</h2>
+    <div class="swiper mySwiper" id="hero-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="image1.png" alt="Project A" />
+          <p>Project A - SEO Growth</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="image2.png" alt="Project B" />
+          <p>Project B - PPC Boost</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="image3.png" alt="Project C" />
+          <p>Project C - Social Campaign</p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section testimonials" id="testimonials">
+    <h2>What Clients Say</h2>
+    <blockquote>"Nirvaanix helped us scale our revenue 3x in just 6 months!" - Startup CEO</blockquote>
+    <blockquote>"Professional, creative, and always results-driven." - Marketing Manager</blockquote>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-subtitle">Have a question or want to work with us? Drop us a message below!</p>
+
+      <div class="contact-content">
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+          <h3>📍 Nirvaanix Office</h3>
+          <p>1st Floor, Balaji Prime, 107 Kothariya Main Rd,<br>Ganesh Nagar, Swati Park, Rajkot, Gujarat 360002</p>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps?q=1st%20Floor%2C%20Balaji%20Prime%2C%20107%2C%20Kothariya%20Main%20Rd%2C%20Ganesh%20Nagar%2C%20Swati%20Park%2C%20Rajkot%2C%20Gujarat%20360002&output=embed"
+              width="100%" height="300" allowfullscreen="" loading="lazy"
+              style="border: 0; border-radius: 12px; margin-top: 10px;"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Nirvaanix. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

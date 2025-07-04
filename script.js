@@ -1,7 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// Animate Navbar (on page load)
-// Animate Navbar (on page load)
+// Navbar entrance animation
 gsap.from(".navbar", {
   y: -60,
   opacity: 0,
@@ -9,7 +8,7 @@ gsap.from(".navbar", {
   ease: "power2.out"
 });
 
-// Navbar Links Animation (staggered)
+// Navbar links stagger animation
 gsap.from(".nav-links li a", {
   opacity: 0,
   y: -20,
@@ -19,8 +18,7 @@ gsap.from(".nav-links li a", {
   ease: "power2.out"
 });
 
-
-// Hero Section (on page load)
+// Hero section animation
 gsap.timeline()
   .from(".hero .content h1", {
     opacity: 0,
@@ -41,7 +39,7 @@ gsap.timeline()
     ease: "back.out(1.7)"
   }, "-=0.5");
 
-// About Section (fade in from left)
+// About section scroll animation
 gsap.timeline({
   scrollTrigger: {
     trigger: ".about",
@@ -53,7 +51,7 @@ gsap.timeline({
   .from(".about h2", { opacity: 0, x: -80 })
   .from(".about p", { opacity: 0, x: -50 }, "-=0.4");
 
-// Services Section (title from top, cards from bottom)
+// Services section scroll animation
 gsap.timeline({
   scrollTrigger: {
     trigger: ".services",
@@ -70,7 +68,7 @@ gsap.timeline({
     stagger: 0.2
   }, "-=0.6");
 
-// Portfolio Section (title from right, slides fade in)
+// Portfolio section scroll animation
 gsap.timeline({
   scrollTrigger: {
     trigger: ".portfolio",
@@ -87,7 +85,7 @@ gsap.timeline({
     stagger: 0.3
   }, "-=0.5");
 
-// Testimonials Section (title from bottom, quotes from left)
+// Testimonials section scroll animation
 gsap.timeline({
   scrollTrigger: {
     trigger: ".testimonials",
@@ -103,7 +101,7 @@ gsap.timeline({
     stagger: 0.3
   }, "-=0.5");
 
-// Contact Section (title from left, form from bottom)
+// Contact section scroll animation
 gsap.timeline({
   scrollTrigger: {
     trigger: ".contact",
@@ -119,7 +117,7 @@ gsap.timeline({
     scale: 0.95
   }, "-=0.4");
 
-// Swiper Slider
+// Swiper Slider config
 const swiper = new Swiper(".mySwiper", {
   loop: true,
   spaceBetween: 30,
@@ -144,4 +142,27 @@ const slider = document.getElementById("hero-slider");
 slider.addEventListener("mouseenter", () => swiper.autoplay.stop());
 slider.addEventListener("mouseleave", () => swiper.autoplay.start());
 
-  
+// Mobile menu toggle
+const navLinks = document.getElementById('nav-links');
+const toggle = document.getElementById('menu-toggle');
+const openIcon = document.getElementById('menu-icon-open');
+const closeIcon = document.getElementById('menu-icon-close');
+
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  const isOpen = navLinks.classList.contains('active');
+  openIcon.style.display = isOpen ? 'none' : 'block';
+  closeIcon.style.display = isOpen ? 'block' : 'none';
+});
+
+// Auto-close menu on nav item click
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      navLinks.classList.remove('active');
+      openIcon.style.display = 'block';
+      closeIcon.style.display = 'none';
+    }
+  });
+});
+
